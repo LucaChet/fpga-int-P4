@@ -1,0 +1,5 @@
+# Ignore Xilinx trial license file
+tools/Xilinx.lic
+
+# Ignore literature directory since not sure about copyright
+literature

@@ -1,0 +1,51 @@
+UserKnownHostsFile /dev/null
+StrictHostKeyChecking no
+ServerAliveInterval 120 
+
+Host bastion.fabric-testbed.net
+     User s317694_0000232527
+     ForwardAgent yes
+     Hostname bastion.fabric-testbed.net
+     IdentityFile fabric-bastion-key
+
+Host fabric-node-fiu
+     Hostname 131.94.57.35
+     User ubuntu
+     ProxyJump s317694_0000232527@bastion.fabric-testbed.net:22
+     IdentityFile slice_key
+
+Host fpga-losa
+     Hostname 2001:400:a100:3070:f816:3eff:fe69:ae4e 
+     User ubuntu
+     ProxyJump s317694_0000232527@bastion.fabric-testbed.net:22
+     IdentityFile slice_key
+
+Host smartnic-losa
+     Hostname 2001:400:a100:3070:f816:3eff:fecc:842a 
+     User ubuntu
+     ProxyJump s317694_0000232527@bastion.fabric-testbed.net:22
+     IdentityFile slice_key
+
+Host sink-seat
+     Hostname 2001:400:a100:3080:f816:3eff:fe38:1ece
+     User ubuntu
+     ProxyJump s317694_0000232527@bastion.fabric-testbed.net:22
+     IdentityFile slice_key
+
+Host fpga-sri
+     Hostname 192.5.67.191
+     User ubuntu
+     ProxyJump s317694_0000232527@bastion.fabric-testbed.net:22
+     IdentityFile slice_key
+
+Host smartnic-utah
+     Hostname 2001:1948:417:7:f816:3eff:fe2a:c43d
+     User ubuntu
+     ProxyJump s317694_0000232527@bastion.fabric-testbed.net:22
+     IdentityFile slice_key
+
+Host sink-utah-sri
+     Hostname 2001:1948:417:7:f816:3eff:fef2:2cb
+     User ubuntu
+     ProxyJump s317694_0000232527@bastion.fabric-testbed.net:22
+     IdentityFile slice_key
